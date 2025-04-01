@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Medical app specific colors
+				medical: {
+					primary: '#0C7489', // Teal blue
+					secondary: '#13505B', // Dark teal
+					accent: '#119DA4', // Bright teal
+					highlight: '#1AC8ED', // Cyan highlight
+					emergency: '#D64045', // Emergency red
+					light: '#E7FBFF', // Light background
+					dark: '#071E22', // Dark background
+					warning: '#F6AE2D', // Warning yellow
+					success: '#3BB273', // Success green
 				}
 			},
 			borderRadius: {
@@ -84,11 +97,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-emergency': {
+					'0%, 100%': { 
+						transform: 'scale(1)',
+						opacity: '1'
+					},
+					'50%': { 
+						transform: 'scale(1.1)', 
+						opacity: '0.9'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-emergency': 'pulse-emergency 2s ease-in-out infinite'
 			}
 		}
 	},
