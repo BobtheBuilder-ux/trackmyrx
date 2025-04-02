@@ -1,7 +1,6 @@
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { UserCircle, CreditCard, Settings, Moon, Sun, Camera, FilePdf } from 'lucide-react';
+import { UserCircle, CreditCard, Settings, Moon, Sun, Camera, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
@@ -14,7 +13,6 @@ const ProfilePage = () => {
   const navigate = useNavigate();
   const [isDark, setIsDark] = useState(false);
   
-  // Toggle dark mode
   const toggleDarkMode = () => {
     setIsDark(!isDark);
     
@@ -47,7 +45,7 @@ const ProfilePage = () => {
         <div className="bg-white dark:bg-card rounded-lg shadow-sm p-4 space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <FilePdf size={20} className="text-medical-primary mr-2" />
+              <FileText size={20} className="text-medical-primary mr-2" />
               <h3 className="font-medium">Recent Prescriptions</h3>
             </div>
             <Button variant="link" size="sm" onClick={() => navigate('/')}>

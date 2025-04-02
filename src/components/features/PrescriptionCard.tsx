@@ -1,5 +1,4 @@
-
-import { FilePdf, ArrowDown } from 'lucide-react';
+import { FileText, ArrowDown } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
@@ -70,7 +69,7 @@ const PrescriptionCard = ({
           className="w-full flex items-center gap-2"
           onClick={handleDownload}
         >
-          <FilePdf size={16} />
+          <FileText size={16} />
           <span>Download PDF</span>
           <ArrowDown size={16} className="ml-auto" />
         </Button>
